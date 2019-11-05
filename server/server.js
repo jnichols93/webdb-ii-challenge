@@ -7,7 +7,7 @@ server.use(express.json())
 server.use('/api/cars', CarRouter)
 
 server.get('/', (req, res) => {
-    res.send('cars DB open')
+    res.send('Entering car DB')
 })
 
 module.exports = server

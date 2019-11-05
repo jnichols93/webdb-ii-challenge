@@ -1,4 +1,4 @@
-const server = require('')
+const server = require('./server/server.js')
 
 const port = 5000
 

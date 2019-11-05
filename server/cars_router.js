@@ -4,12 +4,6 @@ const car = require('express').Router()
 const knex = require('../data/knexfile.js')
 car.use(express.json())
 
-const express = require('express')
-const car = require('express').Router()
-
-const knex = require('../data/knexfile.js')
-car.use(express.json())
-
 
 car.get('/', (req, res) => {
     knex
