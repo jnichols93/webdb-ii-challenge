@@ -1,13 +1,12 @@
 const express = require('express')
 const car = require('express').Router()
 
-const knex = require('../data/knexfile.js')
+const knex = require('../data/knexfile')
 car.use(express.json())
 
 
 car.get('/', (req, res) => {
-    knex
-    .select('*')
+    knex.select('*')
     .from('cars')
     .then(car => {
         res.status(200).json(cars)
@@ -18,8 +17,7 @@ car.get('/', (req, res) => {
 })
 
 car.get('/:id', (req, res) => {
-    knex
-    .select('*')
+    knex.select('*')
     .from('cars')
     .where('id', '=', req.params.id)
     .then(car => {
@@ -31,8 +29,7 @@ car.get('/:id', (req, res) => {
 })
 
 car.post('/', (req, res) => {
-    knex
-    .insert(req.body, id)
+    knex.insert(req.body)
     .into('cars')
     .then(insert => {
         res.status(201).json(insert)
