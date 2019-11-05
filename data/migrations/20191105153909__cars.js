@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('cars', function (table){
-  table.incriments();
+  table.increments();
   table.string('car_make', 40).notNullable();
   table.string('car_model', 40).notNullable();
   table.float('vin', 9).notNullable();
