@@ -6,8 +6,7 @@ car.use(express.json())
 
 
 car.get('/', (req, res) => {
-    knex
-.select('*')
+    knex.select('*')
     .from('cars')
     .then(car => {
         res.status(200).json(cars)
